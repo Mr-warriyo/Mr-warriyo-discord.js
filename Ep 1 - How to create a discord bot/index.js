@@ -7,4 +7,4 @@ console.log(`Logged in as ${client.user.tag}!`);
 client.user.setActivity("Hi")
 });
 
-client.login("config.token")
+client.login(config.token)
