@@ -11,9 +11,10 @@ And in it put things like
 
 
 For example →
-
+```
 {
   "token": "your bot token",
   "prefix": "your bot prefix,
   "mongo": "your mongo db url"
 }
+```
