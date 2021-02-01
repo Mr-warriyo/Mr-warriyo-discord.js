@@ -7,7 +7,7 @@ console.log(`Logged in as ${client.user.tag}!`);
 });
  
 client.on('message', message => {
-  if (message.content === '${config.prefix}ping') {
+  if (message.content === `${config.prefix}ping`) {
     message.channel.send(`The Ping Of Bot Is ${client.ws.ping}ms.\nBot Latency ${Date.now() - message.createdTimestamp}ms`);
   }
 });
