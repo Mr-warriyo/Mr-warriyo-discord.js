@@ -7,14 +7,14 @@ console.log(`Logged in as ${client.user.tag}!`);
 });
 
 client.on('message', message => {
-  if (message.content === '${config.prefix}ping') {
+  if (message.content === `${config.prefix}ping`) {
     message.channel.send(`The Ping Of Bot Is ${client.ws.ping}ms.\nBot Latency ${Date.now() - message.createdTimestamp}ms`);
   }
 });
 
 
 client.on('message', message => {
-  if (message.content.startsWith('${config.prefix}avatar')) {
+  if (message.content.startsWith(`${config.prefix}avatar`)) {
     const user = message.mentions.users.first() || message.author;
     const avEmbed = new Discord.MessageEmbed()
         .setColor("RANDOM")
