@@ -1,7 +1,7 @@
 const Discord = require('discord.js')
 
 module.exports = (client) => {
-    const channelid = "775540873630973982"
+    const channelid = "775540873630973982" // welcome channel id
     
     client.on('guildMemberAdd', (member) => {
         const channel = member.guild.channels.cache.get(channelid)
