@@ -21,20 +21,17 @@ module.exports = {
     let member = message.mentions.members.first();
     if(!member) return message.channel.send(xdemb)
       
-    if(!member.kickable) 
-      return message.channel.send("I cannot kick this user because of my role (it's below his/her)!");
+    if(!member.bannable) 
+      return message.channel.send("I cannot ban this user because of my role (it's below his/her)!");
    if(member.user.id === "584684175035203605") return message.channel.send("I can't kick my owner!")
                 // Your user id ↑
  
     let reason = args.slice(1).join(' ');
     if(!reason) {
-      reason = "No reason given";
-    }
-    else {
-      reason = `${reason}`
+      return message.reply('no reason given')
     }
     
-     member.ban(reason)
+     member.ban({reason})
       .catch(error => message.reply(`Sorry, I couldn't ban because of : ${error}`));
 
       let kick = new Discord.MessageEmbed()
